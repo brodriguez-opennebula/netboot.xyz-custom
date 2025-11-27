@@ -24,9 +24,9 @@ imgargs vmlinuz put_kernel_img_args_here
 boot || goto custom_exit
 
 :option_two
-#kernel https://boot.netboot.xyz/memdisk raw iso
-#initrd https://one-poc.s3.eu-central-1.amazonaws.com/AlmaLinux-onepoc.iso
-sanboot --no-describe --drive 0x81 https://one-poc.s3.eu-central-1.amazonaws.com/AlmaLinux-onepoc.iso || goto failed
+kernel https://boot.netboot.xyz/memdisk raw iso
+initrd https://one-poc.s3.eu-central-1.amazonaws.com/AlmaLinux-onepoc.iso
+#sanboot --no-describe --drive 0x81 https://one-poc.s3.eu-central-1.amazonaws.com/AlmaLinux-onepoc.iso || goto failed
 boot || goto custom_exit
 
 :option_three
