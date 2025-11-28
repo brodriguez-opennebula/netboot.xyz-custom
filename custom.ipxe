@@ -18,9 +18,9 @@ goto ${custom_choice}
 goto custom_exit
 
 :option_one
-set install_params inst.ks=http://192.168.1.199/static/ks_netboot_poc_xyz ip=192.168.4.254::192.168.4.1:255.255.255.0:test_netboot_xyz:enp3s0:none nameserver=192.168.1.1 inst.text inst.repo=http://repo.almalinux.org/almalinux/9.7/BaseOS/x86_64/os/
+set install_params inst.ks=http://192.168.1.199/static/ks_netboot_poc_xyz nameserver=192.168.1.1 inst.text inst.repo=http://repo.almalinux.org/almalinux/9.7/BaseOS/x86_64/os/
 set dir https://repo.almalinux.org/almalinux/9.7/BaseOS/x86_64/os/images/pxeboot
-kernel ${dir}/vmlinuz ${install_params}
+kernel ${dir}/vmlinuz ${install_params} -- quiet
 initrd ${dir}/initrd.img
 #imgargs vmlinuz put_kernel_img_args_here
 boot || goto custom_exit
