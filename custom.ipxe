@@ -18,7 +18,7 @@ goto ${custom_choice}
 goto custom_exit
 
 :option_one
-set install_params inst.ks=http://192.168.1.199/static/ks_netboot_poc_xyz inst.repo=http://192.168.1.199/static/onepocrepo ip=192.168.4.254::192.168.4.1:255.255.255.0:test_netboot_xyz:enp3s0:none
+set install_params inst.ks=http://192.168.1.199/static/ks_netboot_poc_xyz inst.repo=http://192.168.1.199/static/onepocrepo ip=192.168.4.254::192.168.4.1:255.255.255.0:test_netboot_xyz:enp3s0:none root=/dev/ram0
 kernel http://192.168.1.199/static/vmlinuz ${install_params}
 initrd http://192.168.1.199/static/initrd.img
 #imgargs vmlinuz put_kernel_img_args_here
