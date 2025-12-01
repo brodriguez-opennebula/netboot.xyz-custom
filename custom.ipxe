@@ -19,7 +19,8 @@ goto custom_exit
 
 :option_one
 imgfree
-set install_params inst.ks=http://192.168.1.199/static/ks_netboot_poc_xyz inst.repo=http://192.168.1.199/static/onepocrepo ip=192.168.4.6::192.168.4.1:255.255.255.0:netboot:enp3s0:none inst.text 
+set install_params inst.ks=http://192.168.1.199/static/ks_netboot_poc_xyz inst.repo=http://192.168.1.199/static/aux ip=192.168.4.6::192.168.4.1:255.255.255.0:netboot:enp3s0:none inst.text 
+#set install_params inst.ks=http://192.168.1.199/static/ks_netboot_poc_xyz inst.repo=http://192.168.1.199/static/onepocrepo ip=192.168.4.6::192.168.4.1:255.255.255.0:netboot:enp3s0:none inst.text 
 #set install_params inst.ks=http://192.168.1.199/static/ks_netboot_poc_xyz nameserver=192.168.1.1 inst.text inst.repo=http://repo.almalinux.org/almalinux/9.7/BaseOS/x86_64/os/
 set dir https://repo.almalinux.org/almalinux/9.7/BaseOS/x86_64/os/images/pxeboot
 kernel ${dir}/vmlinuz ${install_params} -- quiet
